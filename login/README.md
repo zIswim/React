@@ -21,5 +21,5 @@
   ![image](https://github.com/user-attachments/assets/2f182abe-0ec7-450b-8f15-40bca2880526)
 
  -------------------------------
- 개인적으로 추가할 기능
+ 개인적으로 추가할 기능 <br>
  ++ DB 연결(mongoDB)
