@@ -8,18 +8,24 @@
  password : test123456@@@ <br>
 
 ### [실행 화면]
-- 첫 화면
+`-` 첫 화면 <br>
 ![image](https://github.com/user-attachments/assets/77fe01cb-2194-49fb-8746-f108d5d7c6f8)
 
-- 이메일, 비밀번호 잘못 입력시 : 빨간 글씨로 에러 표시
+`-` 이메일, 비밀번호 잘못 입력시 : 빨간 글씨로 에러 표시 <br>
 ![image](https://github.com/user-attachments/assets/f469d1fb-38e2-4ee4-ac5c-420d0384a8eb)
 
-- 로그인 성공 시 : 성공 alert
+`-` 로그인 성공 시 : 성공 alert <br>
   ![image](https://github.com/user-attachments/assets/369c59f7-e43c-42bf-ada3-58fd4cca06c5)
 
-- 로그인 실패 시 : 실패 alert
+`-` 로그인 실패 시 : 실패 alert <br.
   ![image](https://github.com/user-attachments/assets/2f182abe-0ec7-450b-8f15-40bca2880526)
 
  -------------------------------
- 개인적으로 추가할 기능 <br>
+ ### 개인적으로 추가할 기능 <br>
  ++ DB 연결(mongoDB)
+ 1. mongoose 설치
+    
+    ```
+    npm install mongoose --save
+    ```
+    
