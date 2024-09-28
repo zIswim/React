@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+## 리액트 로그인 화면 만들기
+<a href = "https://youtu.be/IhUN42R3OsM?si=1qEvygweOsz022Op"> 리액트로 로그인 화면 만들기 - 인브로즈 </a>
+1. 필요없는 파일 삭제 <br>
+2. Login.jsx 파일 생성 <br>
+3. 로그인 UI 및 기능 구현 <br>
+4. 더미 데이터 테스트 <br>
+=> email: test@example.com <br>
+ password : test123456@@@ <br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### [실행 화면]
+- 첫 화면
+![image](https://github.com/user-attachments/assets/77fe01cb-2194-49fb-8746-f108d5d7c6f8)
 
-## Available Scripts
+- 이메일, 비밀번호 잘못 입력시 : 빨간 글씨로 에러 표시
+![image](https://github.com/user-attachments/assets/f469d1fb-38e2-4ee4-ac5c-420d0384a8eb)
 
-In the project directory, you can run:
+- 로그인 성공 시 : 성공 alert
+  ![image](https://github.com/user-attachments/assets/369c59f7-e43c-42bf-ada3-58fd4cca06c5)
 
-### `npm start`
+- 로그인 실패 시 : 실패 alert
+  ![image](https://github.com/user-attachments/assets/2f182abe-0ec7-450b-8f15-40bca2880526)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ -------------------------------
+ 개인적으로 추가할 기능
+ ++ DB 연결(mongoDB)
