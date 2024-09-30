@@ -1,3 +1,4 @@
-./Node-React/node_modules
+node_modules
 
-./Node-React/dev.js
+config/dev.js
+
