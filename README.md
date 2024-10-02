@@ -8,3 +8,5 @@
 
 ## 1. Login (로그인 화면 만들기)
 ![image](https://github.com/user-attachments/assets/77fe01cb-2194-49fb-8746-f108d5d7c6f8)
+
+## 2. Node-React(회원가입 기능 추가)
