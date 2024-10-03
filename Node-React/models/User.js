@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 //salt 이용해서 암호화, saltRounds : salt가 몇 글자인지 나타냄
 const saltRounds = 10;
 const jwt = require('jsonwebtoken');
+const util = require('util');
 
 const userSchema = mongoose.Schema({
     name:{
@@ -74,19 +75,22 @@ userSchema.methods.generateToken = function(cb){
 }
 
 
-userSchema.methods.findByToken = function(token, cb){
-    var user = this;
+userSchema.statics.findByToken = function(token) {
+    const user = this;
 
-    //  토큰을 decode
-    jwt.verify(token, 'secret token', function(err, decoded) {
-        // 유저 아이디를 이용해서 유저를 찾은 다음에
-        // 클라이언트에서 가져온 token과 DB에 보관된 토큰이 일치하는지 확인
-
-        user.findOne({"_id": decoded._id, "token" : token}, function(err, user) {
-            if(err) return cb(err);
-            return cb(null, user);
+    return util.promisify(jwt.verify)(token, 'secret token')
+        .then((decoded) => {
+            return user.findOne({
+                "_id": decoded,
+                "token": token
+            });
         })
-    })
+        .catch((err) => {
+            console.log(err);
+            throw new Error("유효하지 않은 토큰입니다.");
+        });
+
+
 }
 
 const User = mongoose.model('User', userSchema);

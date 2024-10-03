@@ -4,7 +4,7 @@ const port = 3000;
 const {User} = require('./models/User');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const {auth} = require('middleware/auth');
+const {auth} = require('./middleware/auth');
 
 
 //body Parser
@@ -112,7 +112,29 @@ app.get('/api/users/auth', auth, (req, res) => {
 })
 
 
-
+// 로그아웃
+app.get('/api/users/logout', auth, (req, res) => {
+    User.findOneAndUpdate({_id: req.user._id},
+    {token: ""}
+    )
+        .then(()=>{
+            return res.status(200).json({
+                logoutSuccess: true,
+            });
+        })
+        .catch((err)=>{
+            return res.status(400).json({
+                logoutSuccess: false,
+                message: err.message
+            });
+        })
+    // (err, user) => {
+    //     if(err) return res.json({success:false, err});
+    //     return res.status(200).send({
+    //         success: true,
+    //     })
+    // })
+})
 
 
 app.listen(port, () =>
